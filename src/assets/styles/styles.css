@@ -1,0 +1,79 @@
+/* Configuraçoes de telas globais (video e tamanho junto com o overlay) */
+
+body {
+    margin: 0;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65); /* ajusta a opacidade aqui */
+    z-index: -1;
+}
+
+/* Header */
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    background: #0d0d0f;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #b0b0b8;
+    font-size: 0.95rem;
+    padding: 8px 4px 2px;   /* reduz o padding de baixo de 8px pra 2px */
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link.active {
+    color: #7c5cff;
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 0;              /* cola na borda de baixo do HEADER */
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #6a4cff, #a78bfa);
+    transition: left 0.3s ease, width 0.3s ease;
+    opacity: 0;
+}
+
+/* Conteudo */
+
+.h1 {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
